@@ -1,8 +1,3 @@
-<link
-      rel="stylesheet"
-      href="https://galiprandi.github.io/css-toolset.css/css-toolset.min.css"
-    /> 
-    
 # Poblar Listas: Buenas prácticas
 
 <blockquote>
