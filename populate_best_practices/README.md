@@ -12,6 +12,8 @@
       </p>
 </blockquote>
 
+- Revise el código del index.html para más detalles.
+
 # Populate List: Best Practices
 
 <blockquote>
@@ -25,6 +27,8 @@
         browser.
       </p>
 </blockquote>
+
+- Review the code in index.html for more details.
 
 ### La función principal / The main function
 
