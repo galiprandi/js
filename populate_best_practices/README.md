@@ -1,7 +1,11 @@
+<link
+      rel="stylesheet"
+      href="https://galiprandi.github.io/css-toolset.css/css-toolset.min.css"
+    /> 
+    
 # Poblar Listas: Buenas prácticas
 
 <blockquote>
-      <h4>Español</h4>
       <p>
         En este ejercicio se busca explicar las buenas prácticas en la
         manipulación del DOM (Document Object Model).
@@ -16,7 +20,6 @@
 # Populate List: Best Practices
 
 <blockquote>
-      <h4>English</h4>
       <p>
         This exercise seeks to explain good practices in the manipulation of the
         DOM (Document Object Model).
