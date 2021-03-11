@@ -31,14 +31,14 @@
 
   <body>
     <a href="./views/header.html" data-module=""></a>
-    <a href="./views/home.html" data-module=""></a>
+    <a href="./views/main.html" data-module=""></a>
     <a href="./views/footer.html" data-module=""></a>
   </body>
   <script>
     function importHTML() {
       // Get all modules to load
       const modules = document.querySelectorAll("a[data-module]")
-      if (!!modules.length) {
+      if (!!!modules.length) {
         console.info("Not modules found")
         return
       }
