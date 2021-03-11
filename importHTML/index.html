@@ -38,9 +38,10 @@
     function importHTML() {
       // Get all modules to load
       const modules = document.querySelectorAll("a[data-module]")
-
-      if (!modules) return
-
+      if (!!modules.length) {
+        console.info("Not modules found")
+        return
+      }
       // Iterate and load modules
       modules.forEach(async (module) => {
         try {
@@ -51,7 +52,6 @@
               throw new Error(
                 response.statusTex || `Error loading module ${url}`
               )
-
             const data = await response.text()
             module.outerHTML = data
           }
