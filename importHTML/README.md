@@ -16,19 +16,19 @@ Import asynchronous html files in containers
 import importHTML from "./importHTML.js"
 ```
 
-2 - Call function when DOM content is loaded:
+2 - Call to function when DOM content is loaded:
 
 ```javascript
 document.addEventListener("DOMContentLoaded", importHTML())
 ```
 
-3 - Require HTML module using anchor tag with a data-module attribute:
+3 - 3 - Use anchor tag with data-module attribute to invoke load HTML:
 
 ```html
 <a href="./views/header.html" data-module="">Loading header...</a>
 ```
 
-All anchor are replaced with content of files loaded.
+All anchor's will be replaced with content of HTML modules loaded.
 
 ---
 
@@ -48,13 +48,13 @@ import importHTML from "./importHTML.js"
 document.addEventListener("DOMContentLoaded", importHTML())
 ```
 
-3 - Requerir los módulos HTML usando etiquetas anclas con el atributo data-module:
+3 - Use la etiqueta de anclaje con el atributo del módulo de datos para invocar la carga HTML:
 
 ```html
 <a href="./views/header.html" data-module="">Loading header...</a>
 ```
 
-Todos los enlaces serán reemplazados por el contenido de los archivos cargados.
+Todos los anclajes serán reemplazados con el contenido de los módulos HTML cargados.
 
 ---
 
