@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>importHTML</title>
+    <style>
+      html,
+      body {
+        height: 100vh;
+        margin: 0 auto;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+      }
+      main {
+        flex-grow: 1;
+        padding: 1em;
+      }
+      header,
+      footer {
+        background-color: coral;
+        color: white;
+        line-height: 2em;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <a href="./views/header.html" data-module=""></a>
+    <a href="./views/home.html" data-module=""></a>
+    <a href="./views/footer.html" data-module=""></a>
+  </body>
+  <script>
+    function importHTML() {
+      // Get all modules to load
+      const modules = document.querySelectorAll("a[data-module]")
+
+      if (!modules) return
+
+      // Iterate and load modules
+      modules.forEach(async (module) => {
+        try {
+          const url = module.href
+          if (url) {
+            const response = await fetch(url)
+            if (!response.ok)
+              throw new Error(
+                response.statusTex || `Error loading module ${url}`
+              )
+
+            const data = await response.text()
+            module.outerHTML = data
+          }
+        } catch (err) {
+          console.error(err)
+        }
+      })
+    }
+
+    // Load importHTML function when document is loaded
+    document.addEventListener("DOMContentLoaded", importHTML)
+  </script>
+</html>
