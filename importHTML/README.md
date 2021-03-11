@@ -22,7 +22,7 @@ import importHTML from "./importHTML.js"
 document.addEventListener("DOMContentLoaded", importHTML())
 ```
 
-3 - 3 - Use anchor tag with data-module attribute to invoke load HTML:
+3 - Use anchor tag with data-module attribute to invoke load HTML:
 
 ```html
 <a href="./views/header.html" data-module="">Loading header...</a>
