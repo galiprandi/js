@@ -24,7 +24,7 @@ Función que importa archivos html en sus respectivos contenedores de forma así
 
 Debe crear enlaces a los documentos que desea cargar de la siguiente manera:
 
-a href = "url_del_archivo"
+a href = "url_del_module"
 
 data-module="" // Requerido
 
