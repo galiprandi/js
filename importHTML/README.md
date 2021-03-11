@@ -6,28 +6,58 @@ Import asynchronous html files in containers
 
 ---
 
-English:
+### Function that imports html files into their respective container asynchronously.
 
-Function that imports html files into their respective container asynchronously.
+### Usage:
 
-You need to create links to the documents you want to upload as follows:
+1 - Import importHTML() function:
 
-a href = "url_of_module"
+```javascript
+import importHTML from "./importHTML.js"
+```
 
-data-module="" // Required
+2 - Call function when DOM content is loaded:
+
+```javascript
+document.addEventListener("DOMContentLoaded", importHTML())
+```
+
+3 - Require HTML module using anchor tag with a data-module attribute:
+
+```html
+<a href="./views/header.html" data-module="">Loading header...</a>
+```
+
+All anchor are replaced with content of files loaded.
 
 ---
 
-Spanish:
+### Función que importa archivos html en sus respectivos contenedores de forma asíncrona.
 
-Función que importa archivos html en sus respectivos contenedores de forma asíncrona.
+### Modo de Uso:
 
-Debe crear enlaces a los documentos que desea cargar de la siguiente manera:
+1 - Importar la función importHTML():
 
-a href = "url_del_module"
+```javascript
+import importHTML from "./importHTML.js"
+```
 
-data-module="" // Requerido
+2 - Llamar a la función cuando el contenido del documento está cargado:
+
+```javascript
+document.addEventListener("DOMContentLoaded", importHTML())
+```
+
+3 - Requerir los módulos HTML usando etiquetas anclas con el atributo data-module:
+
+```html
+<a href="./views/header.html" data-module="">Loading header...</a>
+```
+
+Todos los enlaces serán reemplazados por el contenido de los archivos cargados.
 
 ---
+
+Author: Germán Aliprandi <galiprandi@gmail.com>
 
 Licence: MIT

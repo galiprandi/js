@@ -5,11 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>importHTML</title>
+    <link
+      rel="stylesheet"
+      href="https://galiprandi.github.io/css-toolset.css/css-toolset.min.css"
+    />
     <style>
+      :root {
+        --text: #333333;
+        --primary: #a451e7;
+        --bg: #ffffff;
+      }
       html,
       body {
-        height: 100vh;
-        margin: 0 auto;
+        min-height: 100vh;
       }
       body {
         display: flex;
@@ -17,55 +25,21 @@
       }
       main {
         flex-grow: 1;
-        padding: 1em;
       }
-      main > img {
+      img {
         width: 100%;
         height: auto;
       }
-      header,
-      footer {
-        background-color: coral;
-        color: white;
-        line-height: 2.5em;
+      body {
         text-align: center;
       }
     </style>
+    <script src="main.js" type="module"></script>
   </head>
 
   <body>
-    <a href="./views/header.html" data-module=""></a>
-    <a href="./views/main.html" data-module=""></a>
-    <a href="./views/footer.html" data-module=""></a>
+    <a href="./views/header.html" data-module="">Loading header...</a>
+    <a href="./views/main.html" data-module="">Loading main...</a>
+    <a href="./views/footer.html" data-module="">Loading footer...</a>
   </body>
-  <script>
-    function importHTML() {
-      // Get all modules to load
-      const modules = document.querySelectorAll("a[data-module]")
-      if (!!!modules.length) {
-        console.info("Not modules found")
-        return
-      }
-      // Iterate and load modules
-      modules.forEach(async (module) => {
-        try {
-          const url = module.href
-          if (url) {
-            const response = await fetch(url)
-            if (!response.ok)
-              throw new Error(
-                response.statusTex || `Error loading module ${url}`
-              )
-            const data = await response.text()
-            module.outerHTML = data
-          }
-        } catch (err) {
-          console.error(err)
-        }
-      })
-    }
-
-    // Load importHTML function when document is loaded
-    document.addEventListener("DOMContentLoaded", importHTML)
-  </script>
 </html>
