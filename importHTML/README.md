@@ -10,7 +10,7 @@ Import asynchronous html files in containers
 
 ### Usage:
 
-1 - Import importHTML() function:
+1 - Import importHTML function:
 
 ```javascript
 import importHTML from "./importHTML.js"
@@ -36,7 +36,7 @@ All anchor are replaced with content of files loaded.
 
 ### Modo de Uso:
 
-1 - Importar la función importHTML():
+1 - Importar la función importHTML:
 
 ```javascript
 import importHTML from "./importHTML.js"
