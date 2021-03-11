@@ -5,3 +5,5 @@ Debe crear enlaces a los documentos que desea cargar de la siguiente manera:
 href = "url del archivo a cargar"
 
 data-module="" // Requerido
+
+[DEMO](https://galiprandi.github.io/js/importHTML/)
