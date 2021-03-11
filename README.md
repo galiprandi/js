@@ -6,4 +6,4 @@ Explain good practices in the manipulation of the DOM (Document Object Model)
 
 ## importHTML
 
-Import html files asynchronous
+Import asynchronous html files in containers

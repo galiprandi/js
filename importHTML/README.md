@@ -1,6 +1,6 @@
 # importHTML
 
-Import html files asynchronous
+Import asynchronous html files in containers
 
 ### [DEMO](https://galiprandi.github.io/js/importHTML/)
 
