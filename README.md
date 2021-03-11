@@ -1,3 +1,5 @@
+<img src="./assets/js-1280x640.gif" alt="Javascript functions and examples">
+
 # Javascript functions and examples
 
 ## Populate best practices:
