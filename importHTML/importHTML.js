@@ -2,22 +2,28 @@ export default function importHTML(
   root = document,
   selector = "a[data-module]"
 ) {
+  // Get all modules to import
   const modules = root.querySelectorAll(selector)
 
-  if (!!!modules.length) return
-
+  // Iterate over modules to replace
   modules.forEach((module) => {
-    if (!module.href) return
-    const moduleData = getModuleContent(module.href)
-    moduleData.then((data) => {
-      importHTML(data)
-      module.parentElement.replaceChild(data, module)
-    })
+    const url = module.getAttribute("href")
+    module.textContent = `Loading page "${url}"`
+    if (url) {
+      const moduleContent = getHTMLContent(url)
+      moduleContent.then((data) => {
+        // If data has elements
+        if (data.childElementCount > 0) {
+          importHTML(data)
+          module.parentElement.replaceChild(data, module)
+        }
+      })
+    }
   })
 }
 
 // Function to get content of module
-async function getModuleContent(url) {
+async function getHTMLContent(url) {
   try {
     const response = await fetch(url)
     // Manage error
@@ -30,5 +36,6 @@ async function getModuleContent(url) {
     return template.content
   } catch (error) {
     console.error(error)
+    return
   }
 }
